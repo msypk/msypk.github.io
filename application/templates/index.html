@@ -1,0 +1,4 @@
+{% extends "layout.html" %}
+{% block content %}
+<canvas id = "theCanvas" data-processing-sources="{{url_for('static',filename='test.pde')}}"></canvas>
+{% endblock %}
