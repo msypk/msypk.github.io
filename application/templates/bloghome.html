@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <img src="{{ url_for('static', filename='images/bloghome.jpg')}}" width = '100%' class="rounded float-left" alt="Natanja Grün on Unsplash">
+        <p>Natanja Grün on Unsplash</p>
+    </div>
+    <div class="col-8">
+        <h2 class="display-2">Welcome to my Blog!</h2>
+        <p class="text-center">I write about tech, lifestyle, and whatever comes to mind :)</p>
+    </div>
+</div>
+<hr style="clear:both" class="space">
+{% for post in posts %}
+<div class="row small-gap">
+    <div class="col">
+        <a href='post/{{post.post_id}}' class="blog-title">{{post.title}}</a>
+        <p>{{post.date}}</p>
+        <p>{{post.teaser}}</p>
+    </div>
+</div>
+{% else %}
+no blog posts!
+{% endfor %}
+
+{% endblock %}

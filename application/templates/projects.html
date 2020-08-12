@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <img src="{{ url_for('static', filename='images/projects.jpg')}}" width = '100%' class="rounded float-left" alt="Oscar Yildiz on Unsplash">
+        <p>Oscar Yildiz on Unsplash</p>
+    </div>
+    <div class="col-8">
+        <h2 class="display-2">Technical Work</h2>
+        <p class="text-center">My skills include Python, Java, C#, HTML, CSS, SQL, Excel, and more. <br>I'm currently striving to improve in the web development area.</p>
+    </div>
+</div>
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <h1 class="display-1"><span>Individual Projects</span></h1>
+        <p class = "text-center">Here's some of my solo technical work!</p>
+    </div>
+</div>
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <img src="{{ url_for('static', filename='images/site2.png')}}" class="rounded float-left" width = 80%>
+    </div>
+    <div class="col-8">
+        <h3>Personal Website</h3>
+        <p><b>Objective:</b> How might I establish my personal brand? <br> <b>Skills:</b> HTML, CSS, JavaScript, Java, Python, Flask, MongoDB, Bootstrap, Github, Web Development</p>
+        <p>In August 2020, I used Flask to build this personal website. I learned so many new things, such as how CSS and JavaScript work with HTML, how to embed a Processing sketch, and how to connect a MongoDB database. My favorite part was designing and learning the front-end elements of this application.</p>
+    </div>
+</div>
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <img src="{{ url_for('static', filename='images/dell.jpg')}}" class="rounded-circle float-left" width = 80%>
+    </div>
+    <div class="col-8">
+        <h3>Natural Language Categorizer</h3>
+        <p><b>Objective:</b> How might I automate my internship? <br> <b>Skills:</b> Python, sklearn, Excel, Jupyter Notebook, Machine Learning</p>
+        <p>During the last week of my internship at Dell, I looked at the work being done everyday and came up with a program to cut down time for the team. I enjoyed diving into a new realm I was initially intimidated with, and managed to get 80% accuracy on my natural language text categorization program.</p>
+    </div>
+</div>
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <img src="{{ url_for('static', filename='images/morning.png')}}" class="rounded float-left" width = 80%>
+    </div>
+    <div class="col-8">
+        <h3>Twitter API Stream</h3>
+        <p><b>Objective:</b> How might I gather data about Morning Brew's target audience? <br> <b>Skills:</b> Python, Tweepy, Jupyter Notebook</p>
+        <p>During a group project for my Strategic Information Technologies course, I was tasked with creating a program that listens to the Twitter API stream for Morning Brew, a email newsletter company. My program listened to the top 5 locations with the most Morning Brew related tweets, and tracked hot topics. My group then provided strategic recommendations for the company.</p>
+    </div>
+</div>
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <h1 class="display-1"><span>Group Projects</span></h1>
+        <p class="text-center">Here are the projects I've collaborated on!</p>
+    </div>
+</div>
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <img src="{{ url_for('static', filename='images/plane.png')}}" class="rounded-circle float-left" width = 80%>
+    </div>
+    <div class="col-8">
+        <h3>Web App Competition - 2nd Place</h3>
+        <p><b>Objective:</b> How might we create a flight reservation MVC web application? <br> <b>Skills:</b> C#, ASP.NET, MVC, HTML, Razor, Bootstrap, Identity, Github, Azure, Version Control, Pair Programming</p>
+        <p>My team and I created a web application that could log in customers, pilots, flight crew, and concierge. Customers and concierge could create a reservation, view tickets, and change seats. Flight crew could check in for their flights. I headed the Reservation models and controllers for this project. We placed 2nd accross the MIS department at UT Austin.</p>
+        <p><i>Team members: Som Jadhav, George Li, Zachary Phi</i></p>
+    </div>
+</div>
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <img src="{{ url_for('static', filename='images/game.png')}}" class="rounded float-left" width = 80%>
+    </div>
+    <div class="col-8">
+        <h3>2D Game Development</h3>
+        <p><b>Objective:</b> How might we create a 2D side scroller game? <br> <b>Skills:</b> Java, Processing, Sprite Animation, Scene Hierarchy, OOP, Version Control</p>
+        <p>My team and I created a 2D game where the player must jump over obstacles and defeat enemy characters to reach the end of the game. The player then receives a score, and will be prompted to enter a username for high-scores. We incorporated music, GUI buttons, and keyboard inputs. I headed the scene hierarchy and class structure of the game, and coded the classes for the landscape.</p>
+        <p><i>Team members: Kevin Cherucheril, Guillermo Gallegos</i></p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col">
+        <a href="/blog" class="subtle">Back To Archives</a>
+    </div>
+</div>
+<div class="row small-gap">
+    <div class="col">
+        <h1 class="display-3 title">{{post.title}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <p>Michelle Park <br> {{post.date}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <img src="{{ user_image }}" width=60%>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <p>{{post.image_description}}</p>
+    </div> 
+</div>
+{% for section in post.body %}
+<div class="row small-gap">
+    <div class="col">
+        {% for paragraph in section %}
+        <p>{{paragraph}}</p>
+        {% endfor %}
+    </div> 
+</div>
+<div class="row small-gap">
+    <div class="col">
+        <h3>{{post.heading[loop.index-1]}}</h3>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}

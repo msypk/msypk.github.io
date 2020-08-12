@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <img src="{{ url_for('static', filename='images/about.JPG')}}" width = '30%' class="rounded-circle mx-auto d-block">
+    </div>
+</div>
+<div class="row align-items-center small-gap">
+    <div class="col">
+        <h1 class="display-2">About Me</h1>
+    </div>
+</div>
+<div class="row align-items-center small-gap">
+    <div class="col">
+        <p class="text-center">I was born in Korea and raised in Texas. Growing up, I loved music. I played various instruments and sang and danced wherever I went, usually embarrassing my mom at the grocery store. Now, I spend my time reading, painting, golfing, and playing guitar, all while slowly figuring out who I am as a 20-something. I'll graduate the University of Texas at Austin in May of 2021 with a degree in Business Honors and MIS.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col text-right chunk">
+        <a href="https://open.spotify.com/user/msypk?si=0EHmRzuVRJq4h3RbLEh6fQ" class="subtle">Spotify</a>
+    </div>
+    <div class="col text-left chunk">
+        <a href="https://www.goodreads.com/msypk" class="subtle">Goodreads</a>
+    </div>
+</div>
+<hr style="clear:both" class="space">
+<div class="row row-gap">
+    <div class="col text-center">
+        <h1 class="display-2"><span>Favorite Music</span></h1>
+        <!-- <p>Growing up, I played the violin, piano, and guitar. I currently still play the guitar, and I look up to John Mayer, Mac Aryes, and Bruno Major. I listen to a wide variety of music, but mostly Indie Pop. My favorite artists are Charlie Burg, Harry Styles, and UMI.</p> -->
+        
+    </div>
+</div>
+<div class="row small-gap">
+    <div class="col">
+        <img src="{{url_for('static',filename='images/star.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">Harry Styles</p>
+    </div>
+    <div class="col">
+        <img src="{{url_for('static',filename='images/star.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">John Mayer</p>
+    </div>
+    <div class="col">
+        <img src="{{url_for('static',filename='images/star.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">Mac Aryes</p>
+    </div>
+</div>
+<hr style="clear:both" class="space">
+<div class="row row-gap">
+    <div class="col chunk text-center">
+        <h1 class="display-2"><span>Favorite Books</span></h1>
+        <!-- <p>I love to read because I can experience so many perspectives that differ, yet relate to my own. I particularly like reading memoirs for this reason. My <i>ultimate</i> favorite book from childhood is Ender's Game by Orson Scott Card; I think I've re-read it over 20 times. My current favorite is Educated by Tara Westover.</p> -->
+        
+    </div>
+</div>
+<div class="row small-gap">
+    <div class="col chunk">
+        <img src="{{url_for('static',filename='images/book.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">Educated by Tara Westover</p>
+    </div>
+    <div class="col chunk">
+        <img src="{{url_for('static',filename='images/book.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">Glass Castle by Jeannette Walls</p>
+    </div>
+    <div class="col chunk">
+        <img src="{{url_for('static',filename='images/book.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">Pachinko by Min Jin Lee</p>
+    </div>
+</div>
+<hr style="clear:both" class="space">
+<div class="row row-gap">
+    <div class="col">
+        <h1 class="display-2"><span>Favorite Places</span></h1>
+        <!-- <p>In 2018, I studied abroad in Edinburgh, Scotland for a summer. Seeing the highlands and walking around old town are still my favorite memories to this day. Aside from Scotland, I've also been to Korea, Germany, Switzerland, England, Ireland, France, Italy, and Canada.</p> -->
+    </div>  
+</div>
+<div class="row small-gap">
+    <div class="col chunk">
+        <img src="{{url_for('static',filename='images/travel.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">Edinburgh, Scotland</p>
+    </div>
+    <div class="col chunk">
+        <img src="{{url_for('static',filename='images/travel.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">Banff National Park, Canada</p>
+    </div>
+    <div class="col chunk">
+        <img src="{{url_for('static',filename='images/travel.png')}}" width=10% class="mx-auto d-block">
+        <p class="text-center">Interlaken, Switzerland</p>
+    </div>
+</div>
+<hr style="clear:both" class="space">
+
+{% endblock %}

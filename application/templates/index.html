@@ -1,4 +1,116 @@
+
 {% extends "layout.html" %}
 {% block content %}
-<canvas id = "theCanvas" data-processing-sources="{{url_for('static',filename='test.pde')}}"></canvas>
+
+<div class="container">
+    <div class="row align-items-center row-gap">
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/headshot2.JPG')}}" width = '100%' class="rounded float-left">
+        </div>
+        <div class="col-8">
+            <h2 class="display-2">Hi, I'm Michelle</h2>
+            <p class="text-center">I'm a senior at UT Austin in the Canfield Business Honors Program. I'm majoring <br>in MIS and getting a certificate in Computer Science.</p>
+        </div>
+    </div>
+    <!-- <hr style="clear:both"> -->
+    <div class="row align-items-center row-gap">
+        <div class="col">
+            <h1 class="display-1"><span>Experience</span></h1>
+            <p></p>
+        </div>
+    </div>
+    {% for exp in experience %}
+    <div class="row row-gap">
+        <div class="col-2">
+            {% if exp.job_id == 1 %}
+            <img src="{{ url_for('static', filename='images/dell.jpg')}}" width = '100%' class="rounded-circle float-left">
+            {% elif exp.job_id == 2 %}
+            <img src="{{ url_for('static', filename='images/mycoding.jpg')}}" width = '100%' class="rounded-circle float-left">
+            {% elif exp.job_id == 3 %}
+            <img src="{{ url_for('static', filename='images/pwc.png')}}" width = '100%' class="rounded-circle float-left">
+            {% endif %}
+        </div>
+        <div class = "col-2">
+            <p class="text-right"><b>{{exp.company}}</b></p>
+            <p class="text-right"><i>{{exp.role}}</i><br>{{exp.period}}<br>{{exp.location}}</p>
+        </div>
+        <div class="col">
+            <p class="text-left"><b>Highlight: </b>{{exp.achievement}}</p>
+            <p class="text-left">{{exp.summary}}</p>
+        </div>
+    </div>
+    {% else %}
+    <h3> no experience! </h3>
+    {% endfor %}
+</div>
+
+<div class="row align-items-center row-gap">
+    <div class="col">
+        <h1 class="display-1"><span>On Campus</span></h1>
+        <p></p>
+    </div>
+</div>
+<div class="row align-items-center row-gap">
+    <img src="{{ url_for('static', filename='images/cteam2.png')}}" class="rounded-circle center">
+</div>
+<div class = "row align-items-center small-gap">
+    <div class="col">
+        <h3 class="text-center">ABSA Consulting Team</h3>
+    </div> 
+</div>
+<div class = "row align-items-center">
+    <div class="col">
+        <p class="text-center">Asian Business Students Association is a McCombs affiliated organization. <br>It's consulting team aims to provide free consulting services to small Austin businesses. Here are my experiences with this team!</p>
+    </div>
+    
+</div>
+<section class="timeline">
+    <ol>
+      <li>
+        <div>
+          <time><b>Fall 2018</b></time>
+          <p><i>Client: Uptown Realty<br>Role: Analyst</i></p>
+          <p class="description">Uptown Realty is a local Austin real estate agency. I used competitive analysis to provide marketing recommendations targeting UT students.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time><b>Spring 2019</b></time>
+          <p><i>Client: Pushnami<br>Role: Analyst</i></p>
+          <p class="description">Pushnami is a push notifications company. I used Python and Excel to analyze sales data to find correlations between external factors and customer aquisition.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time><b>Fall 2019</b></time>
+          <p><i>Client: Latinitas<br>Role: Team Lead</i></p>
+          <p class="description">Latinitas is a non-profit aiming to empower girls to innovate. I created a go-to-market strategy and cost analysis for its merchandising.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time><b>Spring 2020</b></time>
+          <p><i>Client: meldCX<br>Role: Team Lead</i></p>
+          <p class="description">MeldCX helps clients build, deploy, and manage commercial apps. I performed industry analysis and market research to provide recommendations for potential partnerships.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time><b>Fall 2020</b></time>
+          <p><i>Co-President</i></p>
+          <p class="description">My role as Co-President includes finding clients, guiding engagements, recruiting students, and leading meetings.</p>
+        </div>
+      </li>
+      <li></li>
+    </ol>
+     
+    <div class="arrows">
+      <button class="arrow arrow__prev disabled" disabled>
+        <img src="{{ url_for('static', filename='images/arrow_prev.png')}}" alt="prev timeline arrow">
+      </button>
+      <button class="arrow arrow__next">
+        <img src="{{ url_for('static', filename='images/arrow_next.png')}}" alt="next timeline arrow">
+      </button>
+    </div>
+  </section>
 {% endblock %}
